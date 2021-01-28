@@ -21,4 +21,5 @@ In order to calculate the map location and connect to the FlightGear program, th
 
 ## Authors
 Ashi Noy.
+
 Raphael Ben-Hamo.
