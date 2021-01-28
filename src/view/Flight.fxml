@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--to open in scene builder, comment the following line.. -->
+<?import view.MapDisplayer?>
+
+<TitledPane fx:id="background" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" text="פאנל שליטה" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FlightController">  <content>
+
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="1061.0" style="-fx-background-color: #5b5b5b;">
+         <children>
+            <Rectangle arcHeight="7.0" arcWidth="8.0" fill="#15571e" height="311.0" layoutX="299.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="7.0" width="303.0" />
+            <Button layoutX="22.0" layoutY="525.0" mnemonicParsing="false" onAction="#Connect" style="-fx-background-color: #6f6f6f;" text="חיבור" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+			<Button fx:id="calc" layoutX="456.0" layoutY="414.0" mnemonicParsing="false" onAction="#Calc" style="-fx-background-color: #6f6f6f;" text="חשב מסלול" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="386.0" layoutY="414.0" mnemonicParsing="false" onAction="#LoadDate" style="-fx-background-color: #6f6f6f;" text="טען מפה" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="auto" layoutX="631.0" layoutY="90.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#AutoPilot" text="טייס אוטומטי" textFill="WHITE" />
+            <RadioButton fx:id="manual" layoutX="756.0" layoutY="90.0" mnemonicParsing="false" onAction="#Manual" text="שליטה ידנית" textFill="WHITE" />
+            <Button layoutX="118.0" layoutY="414.0" mnemonicParsing="false" onAction="#LoadText" style="-fx-background-color: #6f6f6f;" text="טען פקודות" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Slider fx:id="throttle" layoutX="870.0" layoutY="150.0" majorTickUnit="0.1" minorTickCount="1" orientation="VERTICAL" prefHeight="214.0" prefWidth="49.0" value="50.0" />
+            <Slider fx:id="rudder" layoutX="631.0" layoutY="405.0" majorTickUnit="0.1" max="1.0" min="-1.0" minorTickCount="1" prefHeight="18.0" prefWidth="225.0" />
+            <Circle fx:id="border" fill="#525252" layoutX="742.0" layoutY="270.0" radius="100.0" stroke="#061107" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);" />
+            <Circle fx:id="Joystick" fill="#901b1b" layoutX="743.0" layoutY="268.0" radius="30.0" stroke="#083014" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <Text fill="WHITE" layoutX="717.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size:20px " text="פדלים" />
+            <Text fill="WHITE" layoutX="888.0" layoutY="265.0" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size:20px" text="מצערת" />
+            <Text fill="WHITE" layoutX="707.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size:20px" text="ג'ויסטיק" />
+			<TextArea fx:id="TextArea" layoutX="45.0" layoutY="86.0" prefHeight="312.0" prefWidth="224.0" style="-fx-control-inner-background: #000000;" />
+            <MapDisplayer fx:id="map" height="302.0" layoutX="300.0" layoutY="89.0" width="300.0" />
+			<Canvas fx:id="airplane" height="302.0" layoutX="300.0" layoutY="86.0" width="300.0" />
+			<Canvas fx:id="markX" height="302.0" layoutX="300.0" layoutY="86.0" width="300.0" /> 
+         </children>
+      </AnchorPane>
+  </content>
+</TitledPane>
