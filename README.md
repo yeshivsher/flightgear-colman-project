@@ -14,8 +14,6 @@ Achiving a good controller to FlightGear Technology.
 ## Client Side
 The GUI is based on JavaFX technology.
 
-Main window look like this:
-
 ## Server Side
 The server written using Java and MVVM design pattern.
 
